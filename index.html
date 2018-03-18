@@ -1,0 +1,117 @@
+<!doctype>
+<html>
+
+<head>
+    <title>Hello World DApp</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <h1>Contract</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Joining</th>
+                    <th>Total money</th>
+                    <th>Winner money</th>
+                    <th>Odds</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td id="joining-1">0</td>
+                    <td id="totalmoney-1">0</td>
+                    <td id="winnermoney-1">0</td>
+                    <td id="odds-1">0</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td id="joining-2">0</td>
+                    <td id="totalmoney-2">0</td>
+                    <td id="winnermoney-2">0</td>
+                    <td id="odds-2">0</td>
+                </tr>  
+                <tr>
+                    <td>3</td>
+                    <td id="joining-3">0</td>
+                    <td id="totalmoney-3">0</td>
+                    <td id="winnermoney-3">0</td>
+                    <td id="odds-3">0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td id="joining-4">0</td>
+                    <td id="totalmoney-4">0</td>
+                    <td id="winnermoney-4">0</td>
+                    <td id="odds-4">0</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td id="joining-5">0</td>
+                    <td id="totalmoney-5">0</td>
+                    <td id="winnermoney-5">0</td>
+                    <td id="odds-5">0</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td id="joining-5">0</td>
+                    <td id="totalmoney-5">0</td>
+                    <td id="winnermoney-5">0</td>
+                    <td id="odds-5">0</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td id="joining-6">0</td>
+                    <td id="totalmoney-6">0</td>
+                    <td id="winnermoney-6">0</td>
+                    <td id="odds-6">0</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td id="joining-7">0</td>
+                    <td id="totalmoney-7">0</td>
+                    <td id="winnermoney-7">0</td>
+                    <td id="odds-7">0</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td id="joining-8">0</td>
+                    <td id="totalmoney-8">0</td>
+                    <td id="winnermoney-8">0</td>
+                    <td id="odds-8">0</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td id="joining-9">0</td>
+                    <td id="totalmoney-9">0</td>
+                    <td id="winnermoney-9">0</td>
+                    <td id="odds-9">0</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td id="joining-10">0</td>
+                    <td id="totalmoney-10">0</td>
+                    <td id="winnermoney-10">0</td>
+                    <td id="odds-10">0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id='call'>
+        <input id="username" placeholder="Username"></input>
+        <input id="amount" type="number" id="value" placeholder="Vote Money"></input>
+        <input id="pickNumber" type="number" placeholder="Pick Number"></input>
+      
+        <a href="#" onclick="callPickNumber()" class="btn btn-primary">Pick Number</a>
+    </div>
+    <div id="result"></div>
+</body>
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="./index.js"></script>
+
+</html>
