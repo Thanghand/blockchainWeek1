@@ -20,7 +20,7 @@ contract LotteryContract {
     //Constant variables
     uint constant MAXIMUM_PLAYES_CAN_PLAY_TICKETS = 4;
     uint constant MAXIMUM_PLAYING_TICKETS = 10;
-    
+
     // Variables 
     uint callPickNumber;
     uint minimumAmount;    
@@ -64,9 +64,8 @@ contract LotteryContract {
                             playersIsPlaying.push(msg.sender);
                         }
                         historyGamePlayers[gamePlay][msg.sender].betNumbers[picknumber] = msg.value;
-                        historyGamePlayers[gamePlay][msg.sender].countTickets += 1;
                     }
-                
+                    historyGamePlayers[gamePlay][msg.sender].countTickets += 1;
                     mappingTotalAmountOfNumbers[picknumber] += msg.value;  // Counting total Amount 
                     mappingTotalPlayersPickNumbers[picknumber] += 1;
                     
