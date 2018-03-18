@@ -48,14 +48,14 @@ contract LotteryContract {
     }
 
     function pickNumber(uint picknumber) payable public {
-        if (msg.value > minimumAmount){
-            countCallPickNumber += 1;
+        if (msg.value > minimumAmount) {
+           
             if (countCallPickNumber == callPickNumber) {
                 uint randomValue = random();
                 findWinners(randomValue);
                 notifyWinnersChange(randomValue);
             } else {
-                if (countCallPickNumber < callPickNumber && historyGamePlayers[gamePlay][msg.sender].countTickets <= MAXIMUM_PLAYES_CAN_PLAY_TICKETS) {
+                if (countCallPickNumber < callPickNumber && historyGamePlayers[gamePlay][msg.sender].countTickets < MAXIMUM_PLAYES_CAN_PLAY_TICKETS) {
                     // Update bet number for Player 
                     if (historyGamePlayers[gamePlay][msg.sender].betNumbers[picknumber] == 0) {  // PickNumber has not pick 
                         // The player is the first time to play
@@ -72,7 +72,8 @@ contract LotteryContract {
                     uint playersJoining = mappingTotalPlayersPickNumbers[picknumber];
                     uint totalMoneyOfNumber = mappingTotalAmountOfNumbers[picknumber];
                     uint winnerMoney = totalMoneyOfNumber / playersJoining;
-                    uint odds = playersJoining / MAXIMUM_PLAYING_TICKETS;
+                    uint odds = (playersJoining / MAXIMUM_PLAYING_TICKETS) + 4;
+                    countCallPickNumber += 1;
                     NotifyResultPickNumber(picknumber, playersJoining, totalMoneyOfNumber, winnerMoney, odds);
                 }    
             }

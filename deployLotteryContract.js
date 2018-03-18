@@ -21,13 +21,5 @@ deployedContract = LotteryContract.new(
     });
 contractInstance = LotteryContract.at(deployedContract.address);
 
-contractInstance.startGamePlay();
 
-contractInstance.pickNumber(2, {from: web3.eth.accounts[2], gas:  1000000, value: 123});
-
-contractInstance.historyGamePlayers[1][web3.eth.accounts[1]].betNumbers[1];
-
-contractInstance.playersIsPlaying.length;
-
-contractInstance.getPlayer(web3.eth.accounts[1], 1);
 
