@@ -115,22 +115,6 @@ contract LotteryContract {
         }
     }
 
-    function getPlayer(address playerAddress, uint picknumber) public view returns (address p1, uint countPlay ,uint money) {
-        p1 = historyGamePlayers[gamePlay][playerAddress].addressOfAccount;
-        money = historyGamePlayers[gamePlay][playerAddress].betNumbers[picknumber];
-        countPlay = historyGamePlayers[gamePlay][playerAddress].countTickets;
-    }
-
-    function getPlayerJoin(uint index) public view returns(address p1, uint length) {
-        p1 = playersIsPlaying[index];
-        length = playersIsPlaying.length;
-    }
-
-    function getWinner(uint game, uint index) public view returns (address p1, uint money) {
-        p1 = historyWinners[game][index].playerAddress;
-        money = historyWinners[game][index].money;
-    }
-
     function notifyWinnersChange(uint withNumber) private {
         if (historyWinners[gamePlay].length == 0) {
            NotifyWinner(address(0), 0, withNumber);
